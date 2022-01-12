@@ -1,32 +1,32 @@
 Declare,metatab-latest
-Title,"Census Cartographic Boundary Files, 2018 vintage"
+Title,"Census Cartographic Boundary Files, 2020 vintage"
 Description,The cartographic boundary files are simplified representations of selected
 Description,geographic areas from the Census Bureau’s MAF/TIGER geographic database. These
 Description,boundary files are specifically designed for small scale thematic mapping.
 Identifier,ffe50204-919d-4d61-8a49-999b9fcc9c14
-Name,census.gov-boundaries-2020-1.2.8
+Name,census.gov-boundaries-2020-1.1.1
 Dataset,boundaries
 Origin,census.gov
 Time,2020
 Space,
 Grain,
 Variant,
-Version,1.2.8
+Version,1.1.1
 Version.Major,1
 Version.Minor,1
 Version.Patch,1
 Created,2020-05-19T23:24:12
-Modified,2022-01-12T18:48:08
+Modified,2022-01-12T18:51:18
 Updatefrequency,P100Y
 Giturl,https://github.com/CivicKnowledge/tablecloth.io.git
-""
+
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-""
+
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
 Homepage,https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html,Homepage,Page with links to all of the files,
-""
+
 Section,References,Name,Description,
 Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_state_500k.zip,state_500k_source,"State boundaries,  scale  500K:1",
 Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_state_5m.zip,state_5m_source,"State boundaries,  scale 5M:1",
@@ -36,8 +36,8 @@ Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county
 Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_20m.zip,county_20m_source,"County boundaries,  scale 20M:1",
 Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_nation_5m.zip,nation_5m_source,"National boundary, 5M:1",
 Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_nation_20m.zip,nation_20m_source,National boundary 20M:1,
-Reference,shape+https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_zcta510_500k.zip,zcta_500k_source,"ZCTA (Zip Codes), scale 500K:1",
-""
+,,,,
+
 Section,Resources,Name,Description,Schema
 Datafile,python:pylib#process_geo,state_500k,"State boundaries,  scale  500K:1",boundary_schema
 Datafile,python:pylib#process_geo,state_5m,"State boundaries,  scale 5M:1",boundary_schema
@@ -47,8 +47,8 @@ Datafile,python:pylib#process_geo,county_5m,"County boundaries,  scale 5M:1",bou
 Datafile,python:pylib#process_geo,county_20m,"County boundaries,  scale 20M:1",boundary_schema
 Datafile,python:pylib#process_geo,nation_5m,"National boundary, 5M:1",boundary_schema
 Datafile,python:pylib#process_geo,nation_20m,National boundary 20M:1,boundary_schema
-Datafile,python:pylib#process_geo,zcta_500k,"ZCTA (Zip Codes), scale 500K:1",boundary_schema
-""
+,,,,
+
 Section,Schema,DataType,Description,Has_Codes
 Table,boundary_schema,,,
 Table.Column,geoid,string,ACS style geoid,
@@ -58,4 +58,4 @@ Table.Column,state_fips,integer,State FIPS code,
 Table.Column,county_fips,integer,County FIPS code,
 Table.Column,land_area,integer,"Land area, in square meters",
 Table.Column,water_area,integer,"Water area, in square meters",
-Table.Column,geometry,string,Geometry in WKT format.,
+Table.Column,geometry,geometry,Geometry in WKT format.,
