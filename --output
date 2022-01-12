@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Cache-Control: private
+Last-Modified: Thu, 02 May 2019 14:23:28 GMT
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self';
+Content-Type: application/zip
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 25 Jun 2020 17:04:54 GMT
+Transfer-Encoding:  chunked
+Connection: keep-alive
+Connection: Transfer-Encoding
+
